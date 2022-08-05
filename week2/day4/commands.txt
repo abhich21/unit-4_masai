@@ -1,0 +1,23 @@
+use assignment
+db.users.insert()
+
+ db.users.insertMany([{first_name:"ravi",last_name:"gond",email:"rvgond29@gmail.com",gender:"male",ip_adress:"28.287.54.1",age:23},{first_name:"prince",last_name:"shaw",email:"pshaw29@gmail.com",gender:"male",ip_adress:"92.248.84.1",age:24},{first_name:"amit",last_name:"shaw",email:"amsw31@gmail.com",gender:"male",ip_adress:"03.389.84.6",age:21},{first_name:"bablu",last_name:"dayal",email:"babday@98gmail.com",gender:"male",ip_adress:"34.493.00.0",age:24},{first_name:"sakshi",last_name:"rai",email:"sakshiroy4@gmail.com",gender:"female",ip_adress:"09.458.29.3",age:23},{first_name:"abhi",last_name:"roy",email:"abhir45@gmail.com",gender:"male",ip_adress:"98.098.64.2",age:26},{first_name:"ajay",last_name:"ram",email:"ajram43@gmail.com",gender:"male",ip_adress:"45.847.898.0",age:28},{first_name:"puja",last_name:"shaw",email:"pshaw90@gmail.com",gender:"female",ip_adress:"09.938.73.6",age:25},{first_name:"anu",last_name:"singh",email:"anus4562gmail.com",gender:"female",ip_adress:"90.268.90.1",age:27}])
+
+db.users.find().pretty()
+
+db.users.findOne({"_id" : ObjectId("61f9be56331a4c5b5d3b9631")})
+
+db.users.update({"_id" : ObjectId("61f9be56331a4c5b5d3b9631")},{$set:{age:52}})
+
+ db.users.updateMany({age : 23},{$set:{age:52}})
+
+db.users.remove({ "_id" : ObjectId("61f9be56331a4c5b5d3b9634")})
+
+
+ db.users.deleteOne({ "_id" : ObjectId("61f9be56331a4c5b5d3b9631")})
+
+db.user.deleteMany({age:24})
+
+
+db.dropDatabase()
+show dbs
